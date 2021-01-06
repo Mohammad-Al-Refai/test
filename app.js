@@ -83,4 +83,4 @@ app.get('/success', (req, res) => {
 
 app.get('/cancel', (req, res) => res.send('Cancelled'));
 
-app.listen(PORT) => console.log('Server Started'));
+app.listen(PORT)
