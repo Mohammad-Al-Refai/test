@@ -1,7 +1,7 @@
 const express = require('express');
 const ejs = require('ejs');
 const paypal = require('paypal-rest-sdk');
-
+const PORT = process.env.PORT ||  3000 ;
 paypal.configure({
   'mode': 'sandbox', //sandbox or live
   'client_id': 'AaU8tQfmz1_MFDTKuf84yYERXvdDt2ZFJVrxhNW_49DazF4A_F0VBuKyV5_nntyEdZqUa5Oq9ZBj65GV',
@@ -83,4 +83,4 @@ app.get('/success', (req, res) => {
 
 app.get('/cancel', (req, res) => res.send('Cancelled'));
 
-app.listen(3000, () => console.log('Server Started'));
+app.listen(PORT) => console.log('Server Started'));
